@@ -22,8 +22,8 @@ def is_even_and_gt_5(x):
 def is_odd_and_gt_7(x):
     return x % 2 == 1 and x > 7
 
-def is_equal_10(x):
-    return x == 10
+def is_equal_to_value(x):
+    return x == N_div_2
 
 def find(x, f):
     for i in range(len(x)):
@@ -32,10 +32,17 @@ def find(x, f):
     return None
 
 
-x = list(range(10_000_000))
-random.shuffle(x)
+N = 100_000_000
+N_div_2 = N // 2
+x = list(range(N))
+# random.shuffle(x)
 
 start_time = time.time()
-ix = find(x, is_equal_10)
+ix = find(x, is_equal_to_value)
+end_time = time.time()
+print(ix, end_time - start_time)
+
+start_time = time.time()
+ix = x.index(N // 2)
 end_time = time.time()
 print(ix, end_time - start_time)
