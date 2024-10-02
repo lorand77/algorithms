@@ -1,5 +1,16 @@
 #define N 100000000
 #include<stdio.h>
+#include <time.h>
+
+
+int find(int x[], int n, int v) {
+    for (int i=0; i<n; i++) {
+        if (x[i] == v) {
+            return(i);
+        }
+    }
+    return(-1);
+}
 
 
 int main() {
@@ -9,12 +20,12 @@ int main() {
     }
 
     static int ix = -1;
-    for (int i=0; i<N; i++) {
-        if (x[i] == N / 2) {
-            ix = i;
-            break;
-        }
-    }
+    clock_t start, end;
 
-    printf("%d\n",ix);
+    start = clock();
+    ix = find(x, N, N/2);
+    end = clock();
+
+    double elapsed = ((double)(end - start)) / CLOCKS_PER_SEC;
+    printf("%d  %f\n",ix,elapsed);
 }
