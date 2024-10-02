@@ -1,5 +1,5 @@
 #define N 100000000
-#include<stdio.h>
+#include <stdio.h>
 #include <time.h>
 
 
