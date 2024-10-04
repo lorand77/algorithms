@@ -1,0 +1,9 @@
+Running Times in Seconds
+
+N = 100M
+
+
+Python for loop: 3s       120x    24x    4x
+Python .index: 0.7s       30x     6x
+C: 0.12s                  5x
+C optimized: 0.025s
