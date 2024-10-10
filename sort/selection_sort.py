@@ -1,26 +1,34 @@
 import random
 
-def bubble_sort(x):
+def selection_sort(x):
     for i in range(len(x) - 1, 0, - 1):
-        for j in range(0, i):
-            if x[j] > x[j + 1]:
-                x[j], x[j + 1] = x[j + 1], x[j]
+        maximum = x[0]
+        j_maximum = 0
+        for j in range(1, i + 1):
+            if x[j] > maximum:
+                maximum = x[j]
+                j_maximum = j
+        x[j_maximum], x[i] = x[i], x[j_maximum]
 
 
-def bubble_sort_debug(x):
+def selection_sort_debug(x):
     swaps = 0
     reads = 0
     for i in range(len(x) - 1, 0, - 1):
-        for j in range(0, i):
-            if x[j] > x[j + 1]:
-                x[j], x[j + 1] = x[j + 1], x[j]
-                swaps += 1
-            reads += 2
+        maximum = x[0]
+        j_maximum = 0
+        reads += 1
+        for j in range(1, i + 1):
+            reads += 1
+            if x[j] > maximum:
+                maximum = x[j]
+                j_maximum = j
+        x[j_maximum], x[i] = x[i], x[j_maximum]
+        swaps += 1
     print(reads, swaps)
 
 
 x = list(range(1000))
-x.reverse()
-# random.shuffle(x)
-bubble_sort_debug(x)
+random.shuffle(x)
+selection_sort_debug(x)
 # print(x)
