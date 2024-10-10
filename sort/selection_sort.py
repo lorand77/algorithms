@@ -1,4 +1,5 @@
 import random
+import time
 
 def selection_sort(x):
     for i in range(len(x) - 1, 0, - 1):
@@ -32,3 +33,11 @@ x = list(range(1000))
 random.shuffle(x)
 selection_sort_debug(x)
 # print(x)
+
+
+x = list(range(7000))
+random.shuffle(x)
+start_time = time.time()
+selection_sort(x)
+end_time = time.time()
+print(end_time - start_time)
