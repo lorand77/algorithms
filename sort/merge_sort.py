@@ -73,17 +73,16 @@ def merge_sort_debug(x):
             reads += 1
 
 
-x = list(range(8))
+x = list(range(1000))
 random.shuffle(x)
-print(x)
 merge_sort_debug(x)
 # print(x)
 print(reads, assign)
 
 
-# x = list(range(250000))
-# random.shuffle(x)
-# start_time = time.time()
-# merge_sort(x)
-# end_time = time.time()
-# print(end_time - start_time)
+x = list(range(250000))
+random.shuffle(x)
+start_time = time.time()
+merge_sort(x)
+end_time = time.time()
+print(end_time - start_time)
