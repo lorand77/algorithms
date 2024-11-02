@@ -99,32 +99,16 @@ print(f"Sort (randomly shuffled list): {time_sort:.6f} ms")
 
 
 
-# Element access (v=x[i]): 0.000 023 ms
-# Element assignment (x[i]=v): 0.000 023 ms
+# Element access (v=x[i]): 0.000 021 ms
+# Element assignment (x[i]=v): 0.000 021 ms
 
-# Append: 0.018 505 ms     1000x
+# Append: 0.000 042 ms            2x
 
-# Insert (middle): 0.629835 ms     20-30x
-# Pop (middle): 0.385940 ms
-# Del (middle): 0.402495 ms
+# Insert (middle): 0.453 ms       1000x
+# Pop (middle): 0.379 ms
+# Del (middle): 0.349 ms
 
-# Reverse: 0.852356 ms        2x
+# Reverse: 0.974 ms          2-3x
 
-# Find (x.index, middle value+10): 6.919700 ms      10x    O(n)
-
-# Sort (randomly shuffled list): 54.195658 ms      8x     O(n*log(n))
-
-
-# Element access (v=x[i]): 0.000021 ms
-# Element assignment (x[i]=v): 0.000021 ms
-
-# Append: 0.000042 ms            2x
-
-# Insert (middle): 0.453438 ms       1000x
-# Pop (middle): 0.379222 ms
-# Del (middle): 0.349852 ms
-
-# Reverse: 0.974432 ms          2-3x
-
-# Find (x.index, middle value): 6.489376 ms     300_000x access    O(n)
-# Sort (randomly shuffled list): 376.929499 ms   60x             O(n*log(n))  log(n)=20
+# Find (x.index, middle value): 6.489 ms     300_000x access    O(n)
+# Sort (randomly shuffled list): 376.929 ms   60x             O(n*log(n))  log(n)=20
